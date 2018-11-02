@@ -77,11 +77,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RestApiTests.cs" />
     <Compile Include="Entities\CheckResult.cs" />
-    <Compile Include="UITests.cs" />
     <Compile Include="Entities\UserPageOjects.cs" />
     <Compile Include="Entities\Helpers.cs" />
+    <Compile Include="Tests\RestApiTests.cs" />
+    <Compile Include="Tests\UITests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
+    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
