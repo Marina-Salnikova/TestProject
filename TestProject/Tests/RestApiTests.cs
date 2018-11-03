@@ -32,6 +32,7 @@ namespace TestProject
             JavaScriptSerializer jsonSerializer = new JavaScriptSerializer();
             List<CheckResult> results = jsonSerializer.Deserialize<List<CheckResult>>(jsonResult);
 
+            //just example of checking some metric 
             foreach (var result in results)
                 Assert.LessOrEqual(result.Value, 1500, "Load time is " + result.Value.ToString() + " ms. Expeted time is less than 1500 ms.");
         }

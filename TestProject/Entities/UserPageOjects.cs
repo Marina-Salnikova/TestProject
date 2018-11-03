@@ -21,6 +21,7 @@ namespace TestProject
         public string userNameInTable = "#usertable [data-bind$='userName']";
         public string editUserBtn = "#usertable [title='Edit']";
         public string usertable = "#usertable";
+        public string messageBar = ".message-table";
 
         public void Login(string username, string password,ChromeDriver crome)
         {
@@ -77,7 +78,7 @@ namespace TestProject
         {
             IWebElement SubmitBtn = crome.FindElementByCssSelector(saveBtn);
             SubmitBtn.Click();
-            crome.FindElementByCssSelector(".message-table"); 
+            crome.FindElementByCssSelector(messageBar); 
         }
 
         public void DeleteUser(ChromeDriver crome)
@@ -85,7 +86,7 @@ namespace TestProject
             IWebElement SubmitBtn = crome.FindElementByCssSelector(deleteBtn);
             SubmitBtn.Click();
             crome.SwitchTo().Alert().Accept();
-            crome.FindElementByCssSelector(".message-table");
+            crome.FindElementByCssSelector(messageBar);
         }
 
         public int IndexOfUserInTable(string userename, ChromeDriver crome)
